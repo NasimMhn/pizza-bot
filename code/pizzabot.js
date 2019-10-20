@@ -1,31 +1,27 @@
 // functions
 const gotoNext = () => {
-    console.log("Next clicked")
+
     if (document.getElementById("first").style.display === "block") {
         document.getElementById("first").style.display = "none"
         document.getElementById("second").style.display = "block"
         document.getElementById("back_btn").style.display="inline-block"
         document.getElementById("next_btn").disabled = true 
-        console.log("1")
     }
     else if (document.getElementById("second").style.display === "block") {
         document.getElementById("second").style.display = "none"
         document.getElementById("third").style.display = "block"
         document.getElementById("next_btn").disabled = true 
-        console.log("2")
     }
     else if (document.getElementById("third").style.display === "block") {
         document.getElementById("third").style.display = "none"
         document.getElementById("fourth").style.display = "block"
         document.getElementById("next_btn").style.display = "none" 
-        
-        console.log("3")
     }
 };
 
 const gotoPrevious = () => {
     document.getElementById("next_btn").disabled = false 
-    console.log("Back clicked")
+
     if (document.getElementById("second").style.display === "block") {
         document.getElementById("second").style.display = "none"
         document.getElementById("first").style.display = "block"
@@ -84,38 +80,28 @@ let radio_vegetarian = document.getElementById("vegetarian")
 let radio_hawaiian = document.getElementById("hawaiian")
 let radio_pepperoni = document.getElementById("pepperoni")
 
-// Number of pizzas' buttons
-let btn1 = document.getElementById("btn1")
-let btn2 = document.getElementById("btn2")
-let btn3 = document.getElementById("btn3")
-let btn4 = document.getElementById("btn4")
-let btn5 = document.getElementById("btn5")
-let btn6 = document.getElementById("btn6")
-let btn7 = document.getElementById("btn7")
-let btn8 = document.getElementById("btn8")
-let btn9 = document.getElementById("btn9")
-let btn10 = document.getElementById("btn10")
-
 
 // Connecting functions to buttons
 next_btn.addEventListener("click", gotoNext)
 back_btn.addEventListener("click", gotoPrevious)
+
 radio_vegetarian.addEventListener("click", getOrderName) 
 radio_hawaiian.addEventListener("click", getOrderName) 
-radio_pepperoni.addEventListener("click", getOrderName) 
-btn1.addEventListener("click", getConfirmation)
-btn2.addEventListener("click", getConfirmation)
-btn3.addEventListener("click", getConfirmation)
-btn4.addEventListener("click", getConfirmation)
-btn5.addEventListener("click", getConfirmation)
-btn6.addEventListener("click", getConfirmation)
-btn7.addEventListener("click", getConfirmation)
-btn8.addEventListener("click", getConfirmation)
-btn9.addEventListener("click", getConfirmation)
-btn10.addEventListener("click", getConfirmation)
+radio_pepperoni.addEventListener("click", getOrderName)
+
+document.getElementById("btn1").addEventListener("click", getConfirmation)
+document.getElementById("btn2").addEventListener("click", getConfirmation)
+document.getElementById("btn3").addEventListener("click", getConfirmation)
+document.getElementById("btn4").addEventListener("click", getConfirmation)
+document.getElementById("btn5").addEventListener("click", getConfirmation)
+document.getElementById("btn6").addEventListener("click", getConfirmation)
+document.getElementById("btn7").addEventListener("click", getConfirmation)
+document.getElementById("btn8").addEventListener("click", getConfirmation)
+document.getElementById("btn9").addEventListener("click", getConfirmation)
+document.getElementById("btn10").addEventListener("click", getConfirmation)
 
 
-// Starts when loading page by hiding all divs except "first"
+// Starts when loading page
 document.getElementById("first").style.display = "block"
 document.getElementById("second").style.display = "none"
 document.getElementById("third").style.display = "none"

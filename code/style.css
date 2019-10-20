@@ -1,16 +1,22 @@
 
 body {
-  background-color: black;
   background-image: url(assets/background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   font-family: 'Montserrat', sans-serif;
   font-size: 20px;
-  height: 100vh;
+  height: 90vh;
 }
 
 p {
   text-align: center;
+}
+
+footer {
+  padding: 20px;
+  display: block;
+  background-color: #dfb93e;
+  height: 10vh;
 }
 
 /* */
@@ -23,6 +29,7 @@ p {
 
 .pizzabot {
   padding: 20px;
+  height: 370px;
   width: 700px;
   background-color:#dfb93e;
   background-color:rgba(223, 185, 62, 0.80);
@@ -36,9 +43,13 @@ p {
   text-align: center;
 }
 
+#first {
+  line-height: 35px;
+}
+
 /* Controls */
 .controls {
-  position: relative;
+  position: absolute;
   bottom:0;
 }
 .controls button {
@@ -51,8 +62,13 @@ p {
   border-radius: 10px;
   text-decoration: none;
 }
-.controls button:hover {
-  border: 2px #eb8b0e solid; 
+
+.controls #next_btn:hover {
+  border: 2px darkgreen solid; 
+  cursor: pointer;
+}
+.controls #back_btn:hover {
+  border: 2px red solid; 
   cursor: pointer;
 }
 
@@ -76,12 +92,12 @@ label {
 
 /* If checked */
 [type=radio]:checked + figure img {
-  outline: 3px solid #f00;
+  outline: 6px solid darkgreen;
 }
 
 /* If checked */
 [type=radio]:checked + .numBtn {
-  background-color: red;
+  background-color:darkgreen;
   color: white;
 }
 

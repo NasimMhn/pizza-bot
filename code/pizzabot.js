@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // functions
 const gotoNext = () => {
     console.log("Next clicked")
@@ -17,34 +16,9 @@ const gotoNext = () => {
         document.getElementById("fourth").style.display = "block"
         document.getElementById("next_btn").style.display = "none"
         console.log("3")
-=======
-const vegetarian = "Vegetarian Pizza"
-const hawaiian = "Hawaiian Pizza"
-const pepperoni = "Pepperoni Pizza"
-const pizzaPrice = 80
-
-
-
-//Iteration2 - GREETING THE CUSTOMER 
-document.getElementById("greeting").innerHTML = `Hey! Happy to serve your pizza. On our menu we have ${vegetarian},${hawaiian} and ${pepperoni}`
-//alert(`Hey! Happy to serve your pizza. On our menu we have ${vegetarian},${hawaiian} and ${pepperoni}`)
-
-
-//Iteration 5 - checking that the pizza is on the menu    //Iteration6 - part1
-//when checkorderName goes into the function trick the function to exit and go to validate var valid which checks if the pizzaName is on the menu.  
-//document.getElementById("pizzatype").addEventListener("click", orderName);
-
-const checkOrderName = (orderName) =>
-    if (orderName == vegetarian || orderName == hawaiian || orderName == pepperoni) {
-        return true
-    } else {
-        alert('choose the right one')
-        return false
->>>>>>> faaaa096d60b470f83e1e6186550911a67e39849
     }
 };
 
-<<<<<<< HEAD
 const gotoPrevious = () => {
     console.log("Back clicked")
     if (document.getElementById("second").style.display === "block") {
@@ -145,51 +119,3 @@ document.getElementById("first").innerHTML = `<h1>Hey! Happy to serve your pizza
                                               ${vegetarian}<br>
                                               ${hawaiian}<br>
                                               ${pepperoni}`
-=======
-console.log(checkOrderName.addEventListener("click", orderName);
-
-
-        checkOrderName(orderName)
-
-        //Iteration3 - Ask the customer
-
-
-        document.getElementById("ordername").innerHTML = `Enter the name of the pizza you want to order today!`
-
-
-
-
-
-
-        //Iteration3 - Ask the customer 
-        let orderQuantity = prompt(`How many of ${orderName} would you like?`)
-
-
-        //Iteration4 - Finalize the order   //Itration6 - part2
-        const totalCost = (orderQuantity) => {
-            return orderQuantity * pizzaPrice
-        }
-
-        let totalPrice = totalCost(orderQuantity)
-
-
-
-        //Iteration5 - show cooking times    //Iteration6 - part3 
-        const cookingTime = (orderQuantity) => {
-
-            if (orderQuantity <= 2) {
-                return 10
-            } else if (orderQuantity >= 6) {
-                return 20
-            } else {
-                return 15
-
-            }
-        }
-
-        let orderTime = cookingTime(orderQuantity)
-
-
-        //Final message
-        alert(`Great, I'll get started on your ${orderName}  right away, it will cost  ${totalPrice} kr and pizzas will take ${orderTime} minutes`)
->>>>>>> faaaa096d60b470f83e1e6186550911a67e39849

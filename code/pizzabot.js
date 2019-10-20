@@ -4,26 +4,32 @@ const gotoNext = () => {
     if (document.getElementById("first").style.display === "block") {
         document.getElementById("first").style.display = "none"
         document.getElementById("second").style.display = "block"
+        document.getElementById("back_btn").style.display="inline-block"
+        document.getElementById("next_btn").disabled = true 
         console.log("1")
     }
     else if (document.getElementById("second").style.display === "block") {
         document.getElementById("second").style.display = "none"
         document.getElementById("third").style.display = "block"
+        document.getElementById("next_btn").disabled = true 
         console.log("2")
     }
     else if (document.getElementById("third").style.display === "block") {
         document.getElementById("third").style.display = "none"
         document.getElementById("fourth").style.display = "block"
-        document.getElementById("next_btn").style.display = "none"
+        document.getElementById("next_btn").style.display = "none" 
+        
         console.log("3")
     }
 };
 
 const gotoPrevious = () => {
+    document.getElementById("next_btn").disabled = false 
     console.log("Back clicked")
     if (document.getElementById("second").style.display === "block") {
         document.getElementById("second").style.display = "none"
         document.getElementById("first").style.display = "block"
+        document.getElementById("back_btn").style.display = "none"
     } 
     else if (document.getElementById("third").style.display === "block") {
         document.getElementById("third").style.display = "none"
@@ -39,11 +45,13 @@ const gotoPrevious = () => {
 const getOrderName = () => {
     let orderName = document.querySelector('input[name="pizzaChoice"]:checked').value
     document.getElementById("pizzaChoice").innerHTML = orderName
+    document.getElementById("next_btn").disabled = false 
 }
 
 const getConfirmation = () => {
     let orderName = document.querySelector('input[name="pizzaChoice"]:checked').value
     let orderQuantity = document.querySelector('input[name="numberOrdered"]:checked').value
+    document.getElementById("next_btn").disabled = false 
     let totalPrice = orderQuantity * pizzaPrice
     let cookingTime = getCookingTime(orderQuantity)
     fourth.innerHTML = `<br><h3>Great, I'll get started on your ${orderName}  
@@ -112,6 +120,7 @@ document.getElementById("first").style.display = "block"
 document.getElementById("second").style.display = "none"
 document.getElementById("third").style.display = "none"
 document.getElementById("fourth").style.display = "none"
+document.getElementById("back_btn").style.display ="none"
 
 let first = document.getElementById("first")
 document.getElementById("first").innerHTML = `<h1>Hey! Happy to serve your pizza</h1>

@@ -1,23 +1,102 @@
 
+body {
+  background-color: black;
+  background-image: url(assets/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  height: 100vh;
+}
 
-img {
-    height: 200px;
-    width: 200px;
-} 
+p {
+  text-align: center;
+}
 
-[type=radio] { 
-    position: absolute;
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-  ​
-  /* IMAGE STYLES */
-  [type=radio] + img {
-    cursor: pointer;
-  }
-  ​
-  /* CHECKED STYLES */
-  [type=radio]:checked + img {
-    outline: 2px solid #f00;
-  }
+/* */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.pizzabot {
+  padding: 20px;
+  width: 700px;
+  background-color:#dfb93e;
+  background-color:rgba(223, 185, 62, 0.80);
+  border-radius: 50px;
+  position: relative;
+}
+
+#first, #second, #third, #fourth, .controls {
+  margin: auto;
+  width: 700px;
+  text-align: center;
+}
+
+/* Controls */
+.controls {
+  position: relative;
+  bottom:0;
+}
+.controls button {
+  background-color: #dfb93e;
+  margin: 20px;
+  width: 100px;
+  height: 40px;
+  font-size: 20px;
+  border: 1px #000000 solid;
+  border-radius: 10px;
+  text-decoration: none;
+}
+.controls button:hover {
+  border: 2px #eb8b0e solid; 
+  cursor: pointer;
+}
+
+/* second div */
+figure {
+  margin: 10px;
+  display:inline-block;
+}
+figure img {
+  height: 160px;
+  width: 160px;
+}
+
+input {
+  display:none;
+}
+
+label {
+  cursor: pointer;
+}
+
+/* If checked */
+[type=radio]:checked + figure img {
+  outline: 3px solid #f00;
+}
+
+/* If checked */
+[type=radio]:checked + .numBtn {
+  background-color: red;
+  color: white;
+}
+
+/* fourth div */
+.numBtn {
+  display: inline-block;
+  background-color: #dfb93e;
+  border: 1px black solid;
+  margin-top: 70px;
+  height: 50px;
+  width: 50px;
+  font-size: 24px;
+  border-radius: 10px;
+  line-height: 50px;
+}
+.numBtn:hover {
+  background-color: #df993e;
+}

@@ -16,6 +16,7 @@ const gotoNext = () => {
         document.getElementById("third").style.display = "none"
         document.getElementById("fourth").style.display = "block"
         document.getElementById("next_btn").style.display = "none" 
+        document.getElementById("back_btn").innerHTML = "Restart" 
     }
 };
 
@@ -33,8 +34,10 @@ const gotoPrevious = () => {
     }
     else if (document.getElementById("fourth").style.display === "block") {
         document.getElementById("fourth").style.display = "none"
-        document.getElementById("third").style.display = "block"
+        document.getElementById("first").style.display = "block"
         document.getElementById("next_btn").style.display = "inline-block"
+        document.getElementById("back_btn").innerHTML = "Back" 
+        document.getElementById("back_btn").style.display = "none"
     }
 }
 

@@ -4,39 +4,35 @@ const gotoNext = () => {
     if (document.getElementById("first").style.display === "block") {
         document.getElementById("first").style.display = "none"
         document.getElementById("second").style.display = "block"
-        document.getElementById("back_btn").style.display="inline-block"
-        document.getElementById("next_btn").disabled = true 
-    }
-    else if (document.getElementById("second").style.display === "block") {
+        document.getElementById("back_btn").style.display = "inline-block"
+        document.getElementById("next_btn").disabled = true
+    } else if (document.getElementById("second").style.display === "block") {
         document.getElementById("second").style.display = "none"
         document.getElementById("third").style.display = "block"
-        document.getElementById("next_btn").disabled = true 
-    }
-    else if (document.getElementById("third").style.display === "block") {
+        document.getElementById("next_btn").disabled = true
+    } else if (document.getElementById("third").style.display === "block") {
         document.getElementById("third").style.display = "none"
         document.getElementById("fourth").style.display = "block"
-        document.getElementById("next_btn").style.display = "none" 
-        document.getElementById("back_btn").innerHTML = "Restart" 
+        document.getElementById("next_btn").style.display = "none"
+        document.getElementById("back_btn").innerHTML = "Restart"
     }
 };
 
 const gotoPrevious = () => {
-    document.getElementById("next_btn").disabled = false 
+    document.getElementById("next_btn").disabled = false
 
     if (document.getElementById("second").style.display === "block") {
         document.getElementById("second").style.display = "none"
         document.getElementById("first").style.display = "block"
         document.getElementById("back_btn").style.display = "none"
-    } 
-    else if (document.getElementById("third").style.display === "block") {
+    } else if (document.getElementById("third").style.display === "block") {
         document.getElementById("third").style.display = "none"
         document.getElementById("second").style.display = "block"
-    }
-    else if (document.getElementById("fourth").style.display === "block") {
+    } else if (document.getElementById("fourth").style.display === "block") {
         document.getElementById("fourth").style.display = "none"
         document.getElementById("first").style.display = "block"
         document.getElementById("next_btn").style.display = "inline-block"
-        document.getElementById("back_btn").innerHTML = "Back" 
+        document.getElementById("back_btn").innerHTML = "Back"
         document.getElementById("back_btn").style.display = "none"
     }
 }
@@ -44,29 +40,29 @@ const gotoPrevious = () => {
 const getOrderName = () => {
     let orderName = document.querySelector('input[name="pizzaChoice"]:checked').value
     document.getElementById("pizzaChoice").innerHTML = orderName
-    document.getElementById("next_btn").disabled = false 
+    document.getElementById("next_btn").disabled = false
 }
 
 const getConfirmation = () => {
     let orderName = document.querySelector('input[name="pizzaChoice"]:checked').value
     let orderQuantity = document.querySelector('input[name="numberOrdered"]:checked').value
-    document.getElementById("next_btn").disabled = false 
+    document.getElementById("next_btn").disabled = false
     let totalPrice = orderQuantity * pizzaPrice
     let cookingTime = getCookingTime(orderQuantity)
-    fourth.innerHTML = `<br><h3>Great, I'll get started on your ${orderName}  
+    fourth.innerHTML = `<h3>Great, I'll get started on your ${orderName}  
                         right away,  it will cost  ${totalPrice} kr and will 
                         take ${cookingTime} minutes</h3>
                         <img src="assets/time.png">`
 }
 
 const getCookingTime = (orderQuantity) => {
-    if (orderQuantity <= 2 ) { 
+    if (orderQuantity <= 2) {
         return 10
-    } else if (orderQuantity >= 6){
-       return 20
+    } else if (orderQuantity >= 6) {
+        return 20
     } else {
         return 15
-    } 
+    }
 }
 
 // constants
@@ -88,8 +84,8 @@ let radio_pepperoni = document.getElementById("pepperoni")
 next_btn.addEventListener("click", gotoNext)
 back_btn.addEventListener("click", gotoPrevious)
 
-radio_vegetarian.addEventListener("click", getOrderName) 
-radio_hawaiian.addEventListener("click", getOrderName) 
+radio_vegetarian.addEventListener("click", getOrderName)
+radio_hawaiian.addEventListener("click", getOrderName)
 radio_pepperoni.addEventListener("click", getOrderName)
 
 document.getElementById("btn1").addEventListener("click", getConfirmation)
@@ -109,7 +105,7 @@ document.getElementById("first").style.display = "block"
 document.getElementById("second").style.display = "none"
 document.getElementById("third").style.display = "none"
 document.getElementById("fourth").style.display = "none"
-document.getElementById("back_btn").style.display ="none"
+document.getElementById("back_btn").style.display = "none"
 
 let first = document.getElementById("first")
 document.getElementById("first").innerHTML = `<h1>Hey! Happy to serve your pizza</h1>

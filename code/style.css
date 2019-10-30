@@ -159,12 +159,16 @@ label {
   }
 
   figure img {
-    height: 120px;
-    width: 120px;
+    height: 100px;
+    width: 100px;
   }
 
   #fourth img {
     height: 120px;
+  }
+
+  footer {
+    font-size: 14px;
   }
 
 }

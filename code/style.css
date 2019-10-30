@@ -1,11 +1,11 @@
-
 body {
   background-image: url(assets/background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 20px;
   height: 90vh;
+  margin: 0px;
 }
 
 p {
@@ -30,16 +30,22 @@ footer {
 .pizzabot {
   padding: 20px;
   height: 370px;
-  width: 700px;
-  background-color:#dfb93e;
-  background-color:rgba(223, 185, 62, 0.80);
+  width: 90%;
+  max-width: 700px;
+  background-color: #dfb93e;
+  background-color: rgba(223, 185, 62, 0.8);
   border-radius: 50px;
   position: relative;
 }
 
-#first, #second, #third, #fourth, .controls {
+#first,
+#second,
+#third,
+#fourth,
+.controls {
   margin: auto;
-  width: 700px;
+  width: 90%;
+  max-width: 700px;
   text-align: center;
 }
 
@@ -50,8 +56,9 @@ footer {
 /* Controls */
 .controls {
   position: absolute;
-  bottom:0;
+  bottom: 5px;
 }
+
 .controls button {
   background-color: #dfb93e;
   margin: 20px;
@@ -64,26 +71,41 @@ footer {
 }
 
 .controls #next_btn:hover {
-  border: 2px darkgreen solid; 
+  border: 2px darkgreen solid;
   cursor: pointer;
 }
+
 .controls #back_btn:hover {
-  border: 2px red solid; 
+  border: 2px red solid;
   cursor: pointer;
 }
 
 /* second div */
+
 figure {
   margin: 10px;
-  display:inline-block;
+  display: inline-block;
 }
+
+#second .three_pizzas {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 figure img {
   height: 160px;
   width: 160px;
 }
 
+.pizzas_number {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 input {
-  display:none;
+  display: none;
 }
 
 label {
@@ -91,13 +113,13 @@ label {
 }
 
 /* If checked */
-[type=radio]:checked + figure img {
+[type="radio"]:checked+figure img {
   outline: 6px solid darkgreen;
 }
 
 /* If checked */
-[type=radio]:checked + .numBtn {
-  background-color:darkgreen;
+[type="radio"]:checked+.numBtn {
+  background-color: darkgreen;
   color: white;
 }
 
@@ -106,13 +128,43 @@ label {
   display: inline-block;
   background-color: #dfb93e;
   border: 1px black solid;
-  margin-top: 70px;
   height: 50px;
   width: 50px;
+  margin: 5px;
   font-size: 24px;
   border-radius: 10px;
   line-height: 50px;
 }
+
 .numBtn:hover {
   background-color: #df993e;
+}
+
+@media (max-width: 600px) {
+
+  body {
+    font-size: 18px;
+  }
+
+  .pizzabot {
+    height: 330px;
+  }
+
+  h1 {
+    font-size: 23px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  figure img {
+    height: 120px;
+    width: 120px;
+  }
+
+  #fourth img {
+    height: 120px;
+  }
+
 }

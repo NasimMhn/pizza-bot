@@ -6,6 +6,7 @@ body {
   font-size: 20px;
   height: 90vh;
   margin: 0px;
+  width: 100%;
 }
 
 p {
@@ -16,6 +17,7 @@ footer {
   padding: 20px;
   display: block;
   background-color: #dfb93e;
+  width: 100%;
   height: 10vh;
 }
 
@@ -25,6 +27,8 @@ footer {
   justify-content: center;
   align-items: center;
   height: 100%;
+  width: 100%;
+  margin: 0px;
 }
 
 .pizzabot {
@@ -44,9 +48,10 @@ footer {
 #fourth,
 .controls {
   margin: auto;
-  width: 90%;
+  width: 100%;
   max-width: 700px;
   text-align: center;
+  height: 80%;
 }
 
 #first {
@@ -55,13 +60,12 @@ footer {
 
 /* Controls */
 .controls {
-  position: absolute;
-  bottom: 5px;
+  height: 20%;
 }
 
 .controls button {
   background-color: #dfb93e;
-  margin: 20px;
+  margin: 0px 10px;
   width: 100px;
   height: 40px;
   font-size: 20px;
@@ -94,8 +98,8 @@ figure {
 }
 
 figure img {
-  height: 160px;
-  width: 160px;
+  height: 150px;
+  width: 150px;
 }
 
 .pizzas_number {
@@ -159,8 +163,8 @@ label {
   }
 
   figure img {
-    height: 100px;
-    width: 100px;
+    height: 90px;
+    width: 90px;
   }
 
   #fourth img {

@@ -1,7 +1,7 @@
 # Project 4 @ Technigo Bootcamp - Build a Pizza Bot 
 
 
-This week's project is to practices some parts of JavaScripts, to create a little text-based bot which you can use it to order pizza. PS: It won't actually order a real pizza for you. 
+This week's project is to practice some parts of JavaScripts, to create a little text-based bot which you can use it to order pizza. PS: It won't actually order a real pizza for you. 
 This project is made by me and a teammate, using VS Code - Live Share
 
 ## To learn this week 🧠

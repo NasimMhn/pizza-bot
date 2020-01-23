@@ -1,4 +1,4 @@
-##  A "Pizza Bot" Web App 
+##  A "Pizza Bot" Web App  🍕
 
 This project is all about to practice JavaScript functions. The app starts by greeting the customer and take the order. When the bot calculate the cooking time, the order will be finalized. PS: It won't actually order a real pizza for you. 
 This project is made by me and a teammate, using VS Code - Live Share

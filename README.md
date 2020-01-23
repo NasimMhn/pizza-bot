@@ -1,10 +1,9 @@
-# Project 4 @ Technigo Bootcamp - Build a Pizza Bot 
+##  A "Pizza Bot" Web App 
 
-
-This week's project is to practice some parts of JavaScripts, to create a little text-based bot which you can use it to order pizza. PS: It won't actually order a real pizza for you. 
+This project is all about to practice JavaScript functions. The app starts by greeting the customer and take the order. When the bot calculate the cooking time, the order will be finalized. PS: It won't actually order a real pizza for you. 
 This project is made by me and a teammate, using VS Code - Live Share
 
-## To learn this week 🧠
+## Learning objectives 🧠
 
 - Be comfortable using variables
 - Understand control flow and the use of conditionals statements
@@ -12,10 +11,18 @@ This project is made by me and a teammate, using VS Code - Live Share
 - Connect the JavaScript to show visual feedback in the HTML
 - Pair-programming remote
 
-### Tech  💻
+## Technologies used 💻
 
 - HTML
 - CSS 
 - JavaScript 
 
-View live: [https://pizzabot-by-sarah-nasim.netlify.com/](https://pizzabot-by-sarah-nasim.netlify.com/).
+
+## Deployed version 🎯
+
+https://pizzabot-by-sarah-nasim.netlify.com/](https://pizzabot-by-sarah-nasim.netlify.com/
+
+<br>
+<br>
+<p> Nasim Mahzoun 2019 </p>
+

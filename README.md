@@ -20,7 +20,7 @@ This project is made by me and a teammate, using VS Code - Live Share
 
 ## Deployed version 🎯
 
-https://pizzabot-by-sarah-nasim.netlify.com/](https://pizzabot-by-sarah-nasim.netlify.com/
+https://pizzabot-by-sarah-nasim.netlify.com/
 
 <br>
 <br>
